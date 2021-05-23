@@ -46,5 +46,9 @@ GET https://api.github.com/user
 ```
 You can find a demo code in the file called `github_requests.py`. This file contains a first principle code which implement Oauth2 only using vanilla requests library
 
-The file `github_clients.py` makes use of `OAuthlib` python library. You will see that this is better than what was done in `github_requests.py`. `OAuthlib` has methods to generate  appropriate urls. However we still had to rely on `requests` library to make requests, we also had to handle `headers` particularly when making request to the `token` endpoint.
+The file `github_oauthlib.py` makes use of `OAuthlib` python library. 
+
+You will see that this is better than what was done in `github_requests.py`. `OAuthlib` has methods to generate  appropriate urls. However we still had to rely on `requests` library to make requests, we also had to handle `headers` particularly when making request to the `token` endpoint.
+
+Finally you can look at the file `github_requests_oauthlib.py` to see how `Reqeuests Oauthlib` works. Notice how much abstraction is provided by this package
 

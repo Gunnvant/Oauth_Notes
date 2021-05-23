@@ -8,8 +8,8 @@ import json
 config = json.loads(open("config.json").read()) 
 auth_url = "https://github.com/login/oauth/authorize"
 token_url = "https://github.com/login/oauth/access_token"
-client_secret = config['client_secret']
-client_id = config['client_id']
+client_secret = config['github_client_secret']
+client_id = config['github_client_id']
 user_url = "https://api.github.com/user"
 redirect_uri ="https://localhost:5000"
 scopes = ["user"]
