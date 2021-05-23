@@ -3,13 +3,14 @@ Examples on accessing API resources using
 Oauth2 Authorization Grant Flow using vanilla
 requests package
 '''
-import requests 
+import requests
+import json 
+config = json.loads(open("config.json").read()) 
 auth_url = "https://github.com/login/oauth/authorize"
 token_url = "https://github.com/login/oauth/access_token"
-client_secret = "dfdf2b75ad053da1e72bde045bba155e5caf57f3"
+client_secret = config['client_secret']
+client_id = config['client_id']
 user_url = "https://api.github.com/user"
-#starred_url = "https://api.github.com/users/{}/starred?page=1&per_page=1"
-client_id = "a86ff1b2f70c28633d41"
 redirect_uri ="https://localhost:5000"
 scopes = ["user"]
 state = "1234"
