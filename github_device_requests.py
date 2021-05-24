@@ -58,10 +58,6 @@ def poll_api(expires_in,interval,token_url,client_id,device_code):
             poll=False
     return resp 
 
-        
-
-
-
 if __name__=="__main__":
     resp = send_auth_request(auth_url,client_id,scopes)
     if resp.status_code==200:
