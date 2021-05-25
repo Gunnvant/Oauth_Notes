@@ -139,3 +139,5 @@ cython_debug/
 
 #config files
 config.json
+#google config
+client_secret.json
