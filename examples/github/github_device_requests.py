@@ -12,7 +12,7 @@ from requests.models import guess_json_utf
 
 auth_url = "https://github.com/login/device/code"
 token_url = "https://github.com/login/oauth/access_token"
-config = json.loads(open("config.json").read())
+config = json.loads(open("../config.json").read())
 client_id = config['github_client_id']
 scopes = ['user']
 def send_auth_request(auth_url,client_id,scopes):

@@ -6,7 +6,7 @@ from requests_oauthlib import OAuth2Session
 import requests 
 import json
 
-config = json.loads(open("config.json").read())
+config = json.loads(open("../config.json").read())
 client_id = config['github_client_id']
 client_secret = config['github_client_secret']
 auth_url = "https://github.com/login/oauth/authorize"

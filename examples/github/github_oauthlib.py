@@ -7,7 +7,7 @@ from oauthlib.oauth2 import WebApplicationClient
 import json
 import requests 
 
-config = json.loads(open("config.json").read())
+config = json.loads(open("../config.json").read())
 client_id = config['github_client_id']
 client_secret = config['github_client_secret']
 auth_url = "https://github.com/login/oauth/authorize"

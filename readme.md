@@ -44,13 +44,12 @@ git
 Authorization: token OAUTH-TOKEN
 GET https://api.github.com/user
 ```
-You can find a demo code in the file called `github_requests.py`. This file contains a first principle code which implement Oauth2 only using vanilla requests library
+Below are the list of code files you can refer to `examples/github`:
 
-The file `github_oauthlib.py` makes use of `OAuthlib` python library. 
+1. `github_requests.py` uses vanilla requests library to implement oauth2 Authorization flow
+2. `github_oauthlib.py` uses `OAuthlib`. `OAuthlib` provides utilities to generate relevant urls
+3. `github_requests_oauthlib.py` uses`Reqeuests Oauthlib` and has the least code footprint.
 
-You will see that this is better than what was done in `github_requests.py`. `OAuthlib` has methods to generate  appropriate urls. However we still had to rely on `requests` library to make requests, we also had to handle `headers` particularly when making request to the `token` endpoint.
-
-Finally you can look at the file `github_requests_oauthlib.py` to see how `Reqeuests Oauthlib` works. Notice how much abstraction is provided by this package
 
 ### [**Device Flow**](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps#device-flow)
 
@@ -94,7 +93,8 @@ Parameters:
 - grant_type (The grant type must be urn:ietf:params:oauth:grant-type:device_code.
 )
 ```
-The file `github_device_requests.py` has a sample code that illustrates how `device flow` works.
+
+The file `examples/github/github_device_requests.py` has a sample code that illustrates how `device flow` works.
 
 ## **Google Oauth2.0 flow**
 
@@ -189,7 +189,7 @@ Parameters:
 - refresh_token
 ```
 
-You can refer to the files:
+You can refer to the files placed in `examples/google`:
 
 1. `google_requests.py` for an example on how oauth2 flow works using vanilla `requests` library
 2. `google_requests_oauthlib.py` for an example on how to use `requests-oauthlib` package. 

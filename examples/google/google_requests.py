@@ -6,7 +6,7 @@ requests library
 import requests 
 import json
 
-config = json.loads(open("config.json").read())
+config = json.loads(open("../config.json").read())
 client_id = config['google_client_id']
 client_secret = config['google_client_secret']
 redirect_url = config['google_redirect_url']

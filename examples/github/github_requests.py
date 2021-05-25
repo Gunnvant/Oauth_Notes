@@ -5,7 +5,7 @@ requests package
 '''
 import requests
 import json 
-config = json.loads(open("config.json").read()) 
+config = json.loads(open("../config.json").read()) 
 auth_url = "https://github.com/login/oauth/authorize"
 token_url = "https://github.com/login/oauth/access_token"
 client_secret = config['github_client_secret']
