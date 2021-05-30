@@ -194,3 +194,5 @@ You can refer to the files placed in `examples/google`:
 1. `google_requests.py` for an example on how oauth2 flow works using vanilla `requests` library
 2. `google_requests_oauthlib.py` for an example on how to use `requests-oauthlib` package. 
 3. `google_sdk.py` this uses google official sdk for authorization and api access.
+
+This repo is a work in progress.
